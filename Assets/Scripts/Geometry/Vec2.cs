@@ -21,7 +21,6 @@ namespace Sim
 #if UNITY_5_3_OR_NEWER
         public static implicit operator Vec2(UnityEngine.Vector2 v) => new Vec2(v.x, v.y);
         public static implicit operator UnityEngine.Vector2(Vec2 v) => new UnityEngine.Vector2(v.x, v.y);
-        /// <summary>Convert to a world position on the ground plane (Unity x/z).</summary>
         public UnityEngine.Vector3 ToWorld(float height = 0f) => new UnityEngine.Vector3(x, height, y);
 #endif
     }
